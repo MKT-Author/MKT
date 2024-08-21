@@ -1,0 +1,3 @@
+pyhocon==0.3.60
+termcolor==2.4.0
+opencv-python==4.9.0.80
