@@ -153,6 +153,7 @@ class ExperimentDesign:
             return model
 
     def run(self):
+        # inference with the provided weight
         self.freeze_model(self.model)
         test_error, test_loss, test5_error = self.trainer.test()
         print('Top 1 Accuracy: %f, Top 5 Accuracy: %f' % (100 - test_error, 100 - test5_error))
