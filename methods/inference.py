@@ -31,6 +31,7 @@ class Trainer(object):
 		self.model_teacher = utils.data_parallel(
 			model_teacher, self.settings.nGPU, self.settings.GPU)
 
+		# load weight file and set model parameters
 		self.test_loader = test_loader
 		state_dict = torch.load(ckpt_file, map_location='cuda')
 		self.set_state_dict(state_dict)
@@ -59,6 +60,8 @@ class Trainer(object):
 			output = self.model(images)
 
 			loss = torch.ones(1)
+
+			# compare top-1 and top-5 accuracy
 
 			single_error, single_loss, single5_error = utils.compute_singlecrop(
 				outputs=output, loss=loss,
