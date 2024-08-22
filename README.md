@@ -25,7 +25,6 @@ Data-free quantization (DFQ) generates an n-bit quantized (Q) model without orig
 * Python = 3.10.13
 * CUDA = 12.2
 * PyTorch = 2.1.2
-* apt-get install -y libgl1-mesa-glx libglib2.0-0 
 
 ## Installation
 
